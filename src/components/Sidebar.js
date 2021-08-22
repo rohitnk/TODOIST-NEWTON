@@ -25,7 +25,7 @@ export default function Sidebar({ selectTab, setSelectTab }) {
         onClick={() => setSelectTab("NEXT_7")}
       >
         <FaRegCalendar className={"icon"} />
-        Last 7 days
+        Next 7 days
       </div>
     </div>
   );
