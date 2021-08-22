@@ -7,7 +7,6 @@ import isAfter from "date-fns/isAfter";
 import isBefore from "date-fns/isBefore";
 import addDays from "date-fns/addDays";
 import isToday from "date-fns/isToday";
-import { toDate } from "date-fns";
 
 const FORMAT = "dd/MM/yyyy";
 
@@ -84,10 +83,6 @@ const TaskItems = ({ selectTab, tasks, setTasks }) => {
           isBefore(task.date, addDays(new Date(), 7))
       )
       .map((task) => (
-        // <p>
-        //   {task.text}
-        //   {dateFnsFormat(new Date(task.date), FORMAT)}
-        // </p>
         <div className={"taskoutput"}>
           <span>{task.text}</span>
           <span> {dateFnsFormat(new Date(task.date), FORMAT)}</span>
@@ -105,10 +100,6 @@ const TaskItems = ({ selectTab, tasks, setTasks }) => {
       ));
   }
   return tasks.map((task) => (
-    // <p>
-    //   {task.text}
-    //   {dateFnsFormat(new Date(task.date), FORMAT)}
-    // </p>
     <div className={"taskoutput"}>
       <span>{task.text}</span>
       <span> {dateFnsFormat(new Date(task.date), FORMAT)}</span>

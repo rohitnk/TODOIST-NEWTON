@@ -6,7 +6,7 @@ export default function Header() {
   return (
     <header className={"header"}>
       <nav>
-        <img src={Logo} />
+        <img alt={"Logo"} src={Logo} />
       </nav>
     </header>
   );
