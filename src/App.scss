@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  font-family: "Roboto", sans-serif;
+  color: #202020;
+  background-color: #fafafa;
+}
+
+.header {
+  border-bottom: solid 1px #ca2100;
+  background-color: #fd685b;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 15);
+  height: 44px;
+  height: 100px;
+
+  img {
+    height: 100%;
+  }
+
+  nav {
+    height: 100%;
+    width: 922px;
+    display: flex;
+    align-items: center;
+    margin: auto;
+  }
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  max-width: 922px;
+}
+
+.sidebar {
+  user-select: none;
+  width: 266px;
+  height: 100vh;
+  padding-top: 74px;
+  border-right: 1px solid #f1f1f1;
+  background-color: #fafafa;
+
+  div {
+    margin-bottom: 10px;
+    cursor: pointer;
+    padding: 15px;
+    &.active {
+      background-color: white;
+    }
+    .icon {
+      margin-right: 10px;
+    }
+  }
+}
+
+.tasks {
+  background-color: white;
+  height: 100vh;
+  width: calc(922px - 266px);
+  padding: 74px 20px 0;
+
+  .add-task-btn {
+    cursor: pointer;
+    .plus {
+      color: #dd4b39;
+      font-size: 18px;
+    }
+
+    .add-task-text {
+      color: #545454;
+      font-size: 14px;
+      margin: 15px;
+    }
+  }
+}
+.taskoutput {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: 2px solid #dd4b39;
+  margin-top: 10px;
+}
+.add-task-dialog {
+  margin-top: 10px;
+  input {
+    width: 100%;
+    border: 1px solid #ddd;
+    background-color: white;
+    border-radius: 3px;
+    height: 35px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .add-task-action-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    .btns-container {
+      .add-button {
+        border: white;
+        cursor: pointer;
+        border-radius: 3px;
+        font-weight: 700;
+        background-color: #ff5a44;
+        color: white;
+        height: 30px;
+        margin-right: 20px;
+        &:disabled {
+          background-color: gray;
+        }
+      }
+      .cancel-button {
+        cursor: pointer;
+        height: 30px;
+        border: white;
+        background-color: white;
+      }
+    }
+  }
+}
